@@ -14,15 +14,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Algorithm" customModuleProvider="target" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" id="xiS-u5-AQS">
+                    <view key="view" contentMode="scaleToFill" id="ce2-kJ-kVo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZAn-hB-uu2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1000" id="4pJ-RN-bxh"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iZ3-Iw-pP8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="qgb-2w-mpW">
                                 <rect key="frame" x="87" y="147" width="200" height="500"/>
@@ -44,18 +41,17 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ZAn-hB-uu2" secondAttribute="bottom" id="4h1-7U-cfd"/>
-                            <constraint firstItem="ZAn-hB-uu2" firstAttribute="leading" secondItem="xiS-u5-AQS" secondAttribute="leading" id="Sj4-a0-dWb"/>
-                            <constraint firstItem="ZAn-hB-uu2" firstAttribute="width" secondItem="xiS-u5-AQS" secondAttribute="width" id="pRB-ce-2A7"/>
-                            <constraint firstAttribute="trailing" secondItem="ZAn-hB-uu2" secondAttribute="trailing" id="wcl-9i-yWw"/>
-                            <constraint firstItem="ZAn-hB-uu2" firstAttribute="top" secondItem="xiS-u5-AQS" secondAttribute="top" id="x3L-41-Jsb"/>
+                            <constraint firstItem="iZ3-Iw-pP8" firstAttribute="leading" secondItem="ce2-kJ-kVo" secondAttribute="leading" id="4AV-LE-52p"/>
+                            <constraint firstAttribute="trailing" secondItem="iZ3-Iw-pP8" secondAttribute="trailing" id="K75-BH-9ca"/>
+                            <constraint firstAttribute="bottom" secondItem="iZ3-Iw-pP8" secondAttribute="bottom" id="PHY-dw-4Pa"/>
+                            <constraint firstItem="iZ3-Iw-pP8" firstAttribute="top" secondItem="ce2-kJ-kVo" secondAttribute="top" id="X7R-yP-rrg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5nM-Iv-TXy"/>
-                    </scrollView>
+                        <viewLayoutGuide key="safeArea" id="t7n-ru-qZE"/>
+                    </view>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="scroll" destination="xiS-u5-AQS" id="iCf-rl-vj4"/>
                         <outlet property="stageView" destination="qgb-2w-mpW" id="FaV-EK-gNh"/>
                         <segue destination="9B4-XV-51T" kind="show" identifier="toMapCreate" id="n0p-zI-gAM"/>
                     </connections>
