@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3268713C208C4B42007FE299 /* CommandPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3268713B208C4B42007FE299 /* CommandPage.swift */; };
+		3271EC89208ADBE8005CBC7E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */; };
 		32731E6C2084D4C600FA1230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32731E6B2084D4C600FA1230 /* AppDelegate.swift */; };
 		32731E6E2084D4C600FA1230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32731E6D2084D4C600FA1230 /* ViewController.swift */; };
 		32731E712084D4C600FA1230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32731E6F2084D4C600FA1230 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3268713B208C4B42007FE299 /* CommandPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPage.swift; sourceTree = "<group>"; };
+		3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		32731E682084D4C600FA1230 /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32731E6B2084D4C600FA1230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32731E6D2084D4C600FA1230 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		32731E6A2084D4C600FA1230 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */,
+				3268713B208C4B42007FE299 /* CommandPage.swift */,
 				32731E6B2084D4C600FA1230 /* AppDelegate.swift */,
 				32731E6D2084D4C600FA1230 /* ViewController.swift */,
 				32731E6F2084D4C600FA1230 /* Main.storyboard */,
@@ -266,6 +272,8 @@
 				32731E6E2084D4C600FA1230 /* ViewController.swift in Sources */,
 				32731E9C2084DD1000FA1230 /* CollectionViewCell.swift in Sources */,
 				32731E6C2084D4C600FA1230 /* AppDelegate.swift in Sources */,
+				3268713C208C4B42007FE299 /* CommandPage.swift in Sources */,
+				3271EC89208ADBE8005CBC7E /* CustomNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

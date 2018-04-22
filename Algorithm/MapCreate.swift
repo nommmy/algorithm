@@ -27,6 +27,9 @@ class MapCreate: UIViewController, UICollectionViewDataSource,UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+       
     }
 
     override func didReceiveMemoryWarning() {
