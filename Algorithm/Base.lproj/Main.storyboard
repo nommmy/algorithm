@@ -36,6 +36,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9B4-XV-51T" kind="show" identifier="toMapCreate" id="A2d-db-Yr7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -89,7 +92,6 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="stageView" destination="qgb-2w-mpW" id="FaV-EK-gNh"/>
-                        <segue destination="iFC-tt-2j8" kind="show" identifier="toMapCreate" id="n0p-zI-gAM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -170,6 +172,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtB-Zt-Mip">
+                                <rect key="frame" x="164" y="571" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.69411764710000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="lbH-HR-GIL" kind="show" identifier="toCommandMap" id="nET-nx-fPg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -182,110 +193,46 @@
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="MAP" image="tabbar_icon" selectedImage="tabbar_icon" id="FeI-Fv-svn"/>
+                    <connections>
+                        <outlet property="toCommand" destination="AtB-Zt-Mip" id="Hvg-B9-GnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBc-Gr-rKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2148" y="-78.710644677661179"/>
         </scene>
-        <!--COMMAND-->
-        <scene sceneID="l4L-NL-QRA">
+        <!--Command Map-->
+        <scene sceneID="Biw-my-Q6l">
             <objects>
-                <viewController id="Eb7-7V-n37" customClass="CommandPage" customModule="Algorithm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EEX-T1-bXQ">
+                <viewController id="lbH-HR-GIL" customClass="CommandMap" customModule="Algorithm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKq-ZG-0Y5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAV-7g-vPu" customClass="CustomNavigationBar" customModule="Algorithm" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.99215686270000003" green="0.69411764710000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem id="kDC-kb-sjU">
-                                        <barButtonItem key="leftBarButtonItem" title="＜ Stage Select" id="fAV-Xm-W9f">
-                                            <color key="tintColor" red="0.97254901959999995" green="0.98431372549999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="ebl-ey-q4E"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="jui-eb-FYz">
-                                <rect key="frame" x="206" y="124" width="169" height="377"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtu-G5-JUJ">
+                                <rect key="frame" x="164" y="565" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commandcell" id="p6V-kX-LQh">
-                                        <rect key="frame" x="0.0" y="1" width="169" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p6V-kX-LQh" id="sMH-8f-WFq">
-                                            <rect key="frame" x="0.0" y="0.0" width="169" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
-                                </prototypes>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Eb7-7V-n37" id="t3l-Dr-b7H"/>
-                                    <outlet property="delegate" destination="Eb7-7V-n37" id="oXa-TG-oDs"/>
+                                    <action selector="closeAction:" destination="lbH-HR-GIL" eventType="touchUpInside" id="Dg3-JC-KZT"/>
                                 </connections>
-                            </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Am-Td-IOb">
-                                <rect key="frame" x="6" y="130" width="176" height="377"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="renga_pattern" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-Oe-L2v">
-                                <rect key="frame" x="190" y="542" width="169" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="513-WH-zFD"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.69411764710000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="FwK-zL-Ply"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="COMMAND" image="tabbar_icon2" selectedImage="tabbar_icon2" id="7Sg-vw-ddi"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="command_image" destination="RgQ-Oe-L2v" id="GBO-kh-ecx"/>
-                        <outlet property="command_table" destination="jui-eb-FYz" id="Rqa-sE-NSK"/>
-                        <outlet property="execution_table" destination="0Am-Td-IOb" id="wGt-8p-XRl"/>
+                        <outlet property="closeButton" destination="Vtu-G5-JUJ" id="4Ok-UV-hTk"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IcA-WU-VKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MPU-vC-RJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="687.7061469265368"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="MIv-yE-i4x">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iFC-tt-2j8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yKN-fc-LYc">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.99215686270000003" green="0.69411764710000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.99215686270000003" green="0.69411764710000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9B4-XV-51T" kind="relationship" relationship="viewControllers" id="abF-YY-7oR"/>
-                        <segue destination="Eb7-7V-n37" kind="relationship" relationship="viewControllers" id="cZT-t6-nNf"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3XA-tx-Ipm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1208.8" y="-78.710644677661179"/>
+            <point key="canvasLocation" x="2873" y="-72"/>
         </scene>
     </scenes>
     <resources>
         <image name="background1" width="1242" height="2208"/>
-        <image name="renga_pattern" width="170" height="70"/>
         <image name="tabbar_icon" width="30" height="30"/>
-        <image name="tabbar_icon2" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ebl-ey-q4E"/>
-    </inferredMetricsTieBreakers>
 </document>

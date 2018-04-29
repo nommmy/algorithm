@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import BubbleTransition
 
-class MapCreate: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate{
+
+class MapCreate: UIViewController, UIViewControllerTransitioningDelegate{
     
+    @IBOutlet weak var toCommand: UIButton!
+    let transition = BubbleTransition()
     public let mapData:[[Int]] = [[1,1,1,1,1,1,
                                    1,0,0,0,3,1,
                                    1,0,0,0,0,1,
@@ -22,6 +26,7 @@ class MapCreate: UIViewController, UICollectionViewDataSource,UICollectionViewDe
                                    1,1,0,0,1,1,
                                    1,1,2,0,1,1,
                                    1,1,1,1,1,1]]
+  
     
     
     override func viewDidLoad() {
@@ -31,12 +36,40 @@ class MapCreate: UIViewController, UICollectionViewDataSource,UICollectionViewDe
         self.navigationController?.navigationBar.shadowImage = UIImage()
        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .custom
+    }
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = toCommand.center
+        transition.bubbleColor = toCommand.backgroundColor!
+        return transition
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = toCommand.center
+        transition.bubbleColor = toCommand.backgroundColor!
+        return transition
+    }
+}
+
+
+
+
+extension MapCreate: UICollectionViewDataSource,UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // ここでStoryBoard上で設定したIdentifierを使用する

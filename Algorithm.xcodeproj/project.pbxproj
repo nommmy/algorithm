@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3268713C208C4B42007FE299 /* CommandPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3268713B208C4B42007FE299 /* CommandPage.swift */; };
+		324ED2DC20956DD90018098B /* CommandMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324ED2DB20956DD90018098B /* CommandMap.swift */; };
 		3271EC89208ADBE8005CBC7E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */; };
 		32731E6C2084D4C600FA1230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32731E6B2084D4C600FA1230 /* AppDelegate.swift */; };
 		32731E6E2084D4C600FA1230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32731E6D2084D4C600FA1230 /* ViewController.swift */; };
@@ -43,7 +43,7 @@
 /* Begin PBXFileReference section */
 		1967B4AFE56DEBCAA068D977 /* Pods-AlgorithmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmUITests/Pods-AlgorithmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F739AE781EFBD442B698F04 /* Pods-AlgorithmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmTests/Pods-AlgorithmTests.release.xcconfig"; sourceTree = "<group>"; };
-		3268713B208C4B42007FE299 /* CommandPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPage.swift; sourceTree = "<group>"; };
+		324ED2DB20956DD90018098B /* CommandMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandMap.swift; sourceTree = "<group>"; };
 		3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		32731E682084D4C600FA1230 /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32731E6B2084D4C600FA1230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,10 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */,
-				3268713B208C4B42007FE299 /* CommandPage.swift */,
 				32731E6B2084D4C600FA1230 /* AppDelegate.swift */,
 				32731E6D2084D4C600FA1230 /* ViewController.swift */,
 				32731E6F2084D4C600FA1230 /* Main.storyboard */,
+				324ED2DB20956DD90018098B /* CommandMap.swift */,
 				32731E9B2084DD1000FA1230 /* CollectionViewCell.swift */,
 				32731EA12084DE1100FA1230 /* MapCreate.swift */,
 				32731E722084D4C700FA1230 /* Assets.xcassets */,
@@ -188,6 +188,7 @@
 				32731E642084D4C600FA1230 /* Sources */,
 				32731E652084D4C600FA1230 /* Frameworks */,
 				32731E662084D4C600FA1230 /* Resources */,
+				BFA1192BAA959664EDAC8FA0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,6 +362,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BFA1192BAA959664EDAC8FA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Algorithm/Pods-Algorithm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Algorithm/Pods-Algorithm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -368,11 +387,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324ED2DC20956DD90018098B /* CommandMap.swift in Sources */,
 				32731EA22084DE1100FA1230 /* MapCreate.swift in Sources */,
 				32731E6E2084D4C600FA1230 /* ViewController.swift in Sources */,
 				32731E9C2084DD1000FA1230 /* CollectionViewCell.swift in Sources */,
 				32731E6C2084D4C600FA1230 /* AppDelegate.swift in Sources */,
-				3268713C208C4B42007FE299 /* CommandPage.swift in Sources */,
 				3271EC89208ADBE8005CBC7E /* CustomNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,7 +568,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Algorithm/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomiyamax.Algorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -564,7 +586,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Algorithm/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomiyamax.Algorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -580,7 +605,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlgorithmTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomiyamax.AlgorithmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -597,7 +626,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlgorithmTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomiyamax.AlgorithmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -613,7 +646,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlgorithmUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomiyamax.AlgorithmUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -629,7 +666,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlgorithmUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomiyamax.AlgorithmUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

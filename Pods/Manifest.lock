@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 306b02b768d3385a1d9fc3f934c23e34306d99f6
+PODS:
+  - BubbleTransition (2.0.2)
+
+DEPENDENCIES:
+  - BubbleTransition (~> 2.0.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BubbleTransition
+
+SPEC CHECKSUMS:
+  BubbleTransition: 7d98ed7d56f0940e83f350a98103ad473491c769
+
+PODFILE CHECKSUM: 9b3030d108bdc69f613c48d5b124b5f7b388ff01
 
 COCOAPODS: 1.5.0
