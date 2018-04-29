@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321325992095C451003138E4 /* StageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321325982095C451003138E4 /* StageSelectViewController.swift */; };
+		3213259B2095C51D003138E4 /* StageEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3213259A2095C51D003138E4 /* StageEasy.swift */; };
+		3213259D2095C664003138E4 /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3213259C2095C664003138E4 /* StageCell.swift */; };
 		324ED2DC20956DD90018098B /* CommandMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324ED2DB20956DD90018098B /* CommandMap.swift */; };
 		3271EC89208ADBE8005CBC7E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */; };
 		32731E6C2084D4C600FA1230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32731E6B2084D4C600FA1230 /* AppDelegate.swift */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		1967B4AFE56DEBCAA068D977 /* Pods-AlgorithmUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmUITests/Pods-AlgorithmUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2F739AE781EFBD442B698F04 /* Pods-AlgorithmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmTests/Pods-AlgorithmTests.release.xcconfig"; sourceTree = "<group>"; };
+		321325982095C451003138E4 /* StageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageSelectViewController.swift; sourceTree = "<group>"; };
+		3213259A2095C51D003138E4 /* StageEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageEasy.swift; sourceTree = "<group>"; };
+		3213259C2095C664003138E4 /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
 		324ED2DB20956DD90018098B /* CommandMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandMap.swift; sourceTree = "<group>"; };
 		3271EC88208ADBE8005CBC7E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		32731E682084D4C600FA1230 /* Algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,9 @@
 				32731E6B2084D4C600FA1230 /* AppDelegate.swift */,
 				32731E6D2084D4C600FA1230 /* ViewController.swift */,
 				32731E6F2084D4C600FA1230 /* Main.storyboard */,
+				3213259A2095C51D003138E4 /* StageEasy.swift */,
+				321325982095C451003138E4 /* StageSelectViewController.swift */,
+				3213259C2095C664003138E4 /* StageCell.swift */,
 				324ED2DB20956DD90018098B /* CommandMap.swift */,
 				32731E9B2084DD1000FA1230 /* CollectionViewCell.swift */,
 				32731EA12084DE1100FA1230 /* MapCreate.swift */,
@@ -370,10 +379,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Algorithm/Pods-Algorithm-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BubbleTransition/BubbleTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BubbleTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -387,10 +398,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3213259D2095C664003138E4 /* StageCell.swift in Sources */,
+				3213259B2095C51D003138E4 /* StageEasy.swift in Sources */,
 				324ED2DC20956DD90018098B /* CommandMap.swift in Sources */,
 				32731EA22084DE1100FA1230 /* MapCreate.swift in Sources */,
 				32731E6E2084D4C600FA1230 /* ViewController.swift in Sources */,
 				32731E9C2084DD1000FA1230 /* CollectionViewCell.swift in Sources */,
+				321325992095C451003138E4 /* StageSelectViewController.swift in Sources */,
 				32731E6C2084D4C600FA1230 /* AppDelegate.swift in Sources */,
 				3271EC89208ADBE8005CBC7E /* CustomNavigationBar.swift in Sources */,
 			);

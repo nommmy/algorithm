@@ -1,16 +1,20 @@
 PODS:
   - BubbleTransition (2.0.2)
+  - Hero (1.2.0)
 
 DEPENDENCIES:
   - BubbleTransition (~> 2.0.0)
+  - Hero
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - BubbleTransition
+    - Hero
 
 SPEC CHECKSUMS:
   BubbleTransition: 7d98ed7d56f0940e83f350a98103ad473491c769
+  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
 
-PODFILE CHECKSUM: 9b3030d108bdc69f613c48d5b124b5f7b388ff01
+PODFILE CHECKSUM: f64e1ff7eba3691c8c837fbf8be71c9b21ec6281
 
 COCOAPODS: 1.5.0

@@ -6,6 +6,7 @@ target 'Algorithm' do
   use_frameworks!
     # Pods for Algorithm
    pod 'BubbleTransition', '~> 2.0.0'
+    pod 'Hero'
  
   target 'AlgorithmTests' do
     inherit! :search_paths

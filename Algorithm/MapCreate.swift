@@ -13,6 +13,8 @@ import BubbleTransition
 class MapCreate: UIViewController, UIViewControllerTransitioningDelegate{
     
     @IBOutlet weak var toCommand: UIButton!
+    var selectedIndex: IndexPath!
+    var stages: [StageEasy] = StageEasy.stages
     let transition = BubbleTransition()
     public let mapData:[[Int]] = [[1,1,1,1,1,1,
                                    1,0,0,0,3,1,
@@ -31,7 +33,6 @@ class MapCreate: UIViewController, UIViewControllerTransitioningDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
        
