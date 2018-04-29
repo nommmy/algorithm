@@ -11,12 +11,18 @@ import UIKit
 class CommandPage: UIViewController, UIDropInteractionDelegate,UIDragInteractionDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var command_table: UITableView!
     @IBOutlet weak var execution_table: UITableView!
+    @IBOutlet weak var command_image: UIImageView!
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dragInteraction = UIDragInteraction(delegate: self)
+        dragInteraction.isEnabled = true
+        command_image.addInteraction(dragInteraction)
         command_table.addInteraction(UIDropInteraction(delegate: self))
         execution_table.addInteraction(UIDropInteraction(delegate: self))
         // Do any additional setup after loading the view.
@@ -27,48 +33,43 @@ class CommandPage: UIViewController, UIDropInteractionDelegate,UIDragInteraction
         // Dispose of any resources that can be recreated.
     }
     
-    func dragInteraction(_ interaction: UIDragInteraction,
-                         itemsForBeginning session: UIDragSession) -> [UIDragItem] {
-        let text = "うぇーいｗｗ" as NSString
-        return [UIDragItem(itemProvider: NSItemProvider(object: text))]
-    }
-    
-    func dropInteraction(_ interaction: UIDropInteraction,
-                         sessionDidUpdate session: UIDropSession) -> UIDropProposal {
-        // ドロップできない場所では .forbidden を返します。
-//        let point = session.location(in: execution_table)
-//        guard forbiddenView != execution_table.hitTest(point, with: nil) else{
-//            return UIDropProposal(operation: .forbidden)
-//        }
+  
+    func dragInteraction(
+        _ interaction: UIDragInteraction,
+        itemsForBeginning session: UIDragSession) -> [UIDragItem] {
         
-        // ドラッグ中のアイテムが文字列を含んでいる場合はドロップできます。
-        if session.canLoadObjects(ofClass: NSString.self) {
-            return UIDropProposal(operation: .move)
+        guard let image = command_image.image else { return [] }
+        
+        let provider = NSItemProvider(object: image)
+        let item = UIDragItem(itemProvider: provider)
+        item.localObject = image
+        return [item]
+    }
+    
+    func dropInteraction(
+        _ interaction: UIDropInteraction,
+        sessionDidUpdate session: UIDropSession) -> UIDropProposal {
+        
+        let dropLocation = session.location(in: view)
+        let operation: UIDropOperation
+        
+        if command_image.frame.contains(dropLocation) {
+            operation = session.localDragSession == nil ? .copy : .move
         } else {
-            return UIDropProposal(operation: .cancel)
+            operation = .cancel
         }
+        
+        return UIDropProposal(operation: operation)
     }
     
-    
-    func dropInteraction(_ interaction: UIDropInteraction,
-                         performDrop session: UIDropSession) {
-        for item in session.items {
-            // 文字列をロードできないアイテムはスキップします
-            if item.itemProvider.canLoadObject(ofClass: NSString.self) {
-                item.itemProvider.loadObject(ofClass: NSString.self) { (object, error) in
-                    // アイテムのロードは非同期に行われます
-                    // ロードが終わるとここにやってきます
-                    if (object as? NSString) != nil {
-                        // UIへの反映はメインスレッドで行います
-                        DispatchQueue.main.async {
-                           // self.infoLabel.text = String(format: "Dropped string - %@", string)
-                        }
-                    }
-                }
-            }
+    func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
+        
+        session.loadObjects(ofClass: UIImage.self) { imageItems in
+            guard let images = imageItems as? [UIImage] else { return }
+            
+            self.command_image.image = images.first
         }
     }
-    
     
     
     //各セルの要素を設定する

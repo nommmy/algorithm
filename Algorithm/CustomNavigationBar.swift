@@ -12,6 +12,7 @@ class CustomNavigationBar: UINavigationBar {
 
     //デフォルトよりどれだけ高くするか
     let addHeight:CGFloat = 28.0
+    let myBoundSize: CGSize = UIScreen.main.bounds.size
     
     @IBOutlet weak var navBar: CustomNavigationBar!
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +28,7 @@ class CustomNavigationBar: UINavigationBar {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         //渡されるsizeは widthは決まっているがheightは決まっていない
         //super.sizeThatFits(size)でheightが決まる
-        var newSize = CGSize(width : 375, height:44)
+        var newSize = CGSize(width : myBoundSize.width, height:44)
         
         //ここ後々調整。今のままだと適用されてない
         //iphoneX用
